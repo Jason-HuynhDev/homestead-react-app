@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+/* seaport color palette https://www.color-hex.com/color-palette/1006263 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+} 
+
+body {
+    background-color: #073b4c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #f4b942;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
 }
 
-.App-link {
-  color: #61dafb;
+#form {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    align-items: center;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    margin-top: .5rem;
+    width: 70vw;
+    border: none;
+    border-radius: .5rem;
+    text-align: center;
+    padding: .4vh;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.editing-input {
+    width: auto;
+    margin: .4rem;
+}
+
+.addBtn {
+    border: none;
+    border-radius: .5rem;
+    background-color: lightgreen;
+    padding: .4rem .8rem;
+    margin: .6rem;
+}
+
+/* list container */
+.searchBar {
+    margin: .5rem;
+}
+
+.inventory-container {
+    border: 2px solid #748cab;
+    margin: .4rem 1rem;
+    flex-grow: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formTableContainer {
+    width: 100%;
+}
+
+table {
+    width: 90%;
+    margin: .5rem auto;
+}
+
+table, tr, th, td {
+    border: 2px solid #748cab;
+    border-collapse: collapse;
+    color: #f4b942;
+    font-size: 1rem;
+}
+
+th {
+    padding: 0 .4rem;
+}
+
+td {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    border-radius: .4rem;
+    background-color: lightgreen;
+    padding: .1rem .4rem;
+    margin: .1rem;
+}
+
+.deleteBtn {
+    background-color: #ef4040;
+}
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+    width: .8vw;
+}
+
+::-webkit-scrollbar-track {
+    background:#f4b942;
+    border-radius: 100vw;
+    margin-block: .2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: .2rem solid #f4b942;
+    border-radius: 100vw;
+    background:#073b4c;
+}
+
+@media (min-width:480px) {
+    #form div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 75vw;
+        margin: 1vh auto;
+    }
+
+    input {
+        width: 30vw;
+        padding: 1vh;
+        font-size: 1.2rem;
+    }
+
+    table, tr, th, td, button {
+        font-size: 1.2rem;
+    }
+    .btn {
+        margin: .5rem;
+    }
+    
 }
