@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/homestead-react-app/static/css/main.7fa506c8.css",
+    "main.js": "/homestead-react-app/static/js/main.95647cf5.js",
+    "index.html": "/homestead-react-app/index.html",
+    "main.7fa506c8.css.map": "/homestead-react-app/static/css/main.7fa506c8.css.map",
+    "main.95647cf5.js.map": "/homestead-react-app/static/js/main.95647cf5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fa506c8.css",
+    "static/js/main.95647cf5.js"
+  ]
+}
