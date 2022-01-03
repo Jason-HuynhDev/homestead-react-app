@@ -12,7 +12,6 @@ function App() {
   const [selectedInventoryItemID, setSelectedInventoryItemID] = useState()
   const selectedInventoryItem = inventoryItems.find(item => item.id === selectedInventoryItemID)
   
-
   const inventoryNameRef = useRef()
   const inventoryQuantityRef = useRef()
   const inventoryDateRef = useRef()
@@ -27,7 +26,6 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(inventoryItems))
   },[inventoryItems])
 
-  
   function handleAddItem(e) {
     e.preventDefault()
   
@@ -125,7 +123,7 @@ function App() {
               <tbody>
 
                 { 
-                  searchTerm != 0
+                  searchTerm !== ""
                     ?  searchTerm.map(item=> {
                       return (
                         <FilteredInventory key={item.id} {...item} handleItemDelete={handleItemDelete}/>
@@ -145,8 +143,6 @@ function App() {
                               handleItemDelete={handleItemDelete} 
                               handleEditClick={handleEditClick}
                             />
-                        
-                        
                       )
                     } )
                 }

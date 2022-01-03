@@ -6,7 +6,8 @@ export default function FilteredInventory(props) {
         name,
         quantity,
         date,
-        handleItemDelete
+        handleItemDelete,
+        handleEditClick
     } = props
     
     return (
@@ -14,7 +15,10 @@ export default function FilteredInventory(props) {
             <td>{name}</td>
             <td>{quantity}</td>
             <td>{date}</td>
-            <td><button className='deleteBtn btn' onClick={()=> handleItemDelete(id)}>-</button></td>
+            <td>
+                <button className="btn" onClick={(e)=> handleEditClick(e, id)}>Edit</button>
+                <button className='deleteBtn btn' onClick={()=> handleItemDelete(id)}>-</button>
+            </td>
         </tr>
     )
 }
