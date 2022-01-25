@@ -1,3 +1,12 @@
+# Homestead Resource Management
+
+## Description
+
+An application made to track your existing inventory on your homestead.
+Keep track of what you have by listing yout item, quantity, date made for spoilage, edit and delete, and filter/search your 
+exisitng inventory.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
